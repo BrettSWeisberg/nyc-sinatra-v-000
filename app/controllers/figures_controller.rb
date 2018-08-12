@@ -70,7 +70,7 @@ class FiguresController < ApplicationController
             landmarks << Landmark.find_by_id(id)
         end
       end
-#binding.pry
+
       @figure.update(titles: titles, name: params[:figure][:name], landmarks: landmarks)
       redirect to "/figures/#{@figure.id}"
     end
