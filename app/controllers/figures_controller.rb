@@ -71,7 +71,7 @@ class FiguresController < ApplicationController
         end
       end
 #binding.pry
-      @figure = Figure.update(titles: titles, name: params[:figure][:name], landmarks: landmarks)
+      @figure.update(titles: titles, name: params[:figure][:name], landmarks: landmarks)
       redirect to "/figures/#{@figure.id}"
     end
 end
