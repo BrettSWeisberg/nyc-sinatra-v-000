@@ -49,7 +49,7 @@ class FiguresController < ApplicationController
   end
 
     post '/figures/:id' do #edit a figure
-
+      @figure = Figure.find_by(params[:id])
       titles =[]
       if params[:title][:name] != ""
           titles << Title.create(name: params[:title][:name])
