@@ -33,7 +33,7 @@ class LandmarksController < ApplicationController
   post '/landmarks/:id' do
     binding.pry
     @landmark = Landmark.find_by(params[:id])
-    landmark = Landmark.update(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
+    @landmark = Landmark.update(name: params[:landmark][:name], year_completed: params[:landmark][:year_completed])
     redirect to "/landmarks/#{@landmark.id}"
   end
 
